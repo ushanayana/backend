@@ -15,25 +15,24 @@ pipeline {
     }
 
     stages {
-        stage('Init') {
+        stage('Test') {
             steps {
                 sh """
-                cd 01-vpc
-                terraform init -reconfigure
+                echo "this is testing"
                 """
             }
         }
-        stage('Plan') {
-            steps {
-                sh 'echo "this is test"'
+        // stage('Plan') {
+        //     steps {
+        //         sh 'echo "this is test"'
                 
-            }
-        }
-        stage('Deploy') {
-            steps {
-                sh 'echo "this is deploy"'
-            }
-        }
+        //     }
+        // }
+        // stage('Deploy') {
+        //     steps {
+        //         sh 'echo "this is deploy"'
+        //     }
+        // }
 
     }   
         
